@@ -6,7 +6,7 @@ INSTANCE_CONNECTION_NAME="${3}"
 TOKEN="${4:-null}"
 IMPLICIT_CREDENTIALS="${GOOGLE_APPLICATION_CREDENTIALS:-null}"
 DIR="/tmp/action-google-cloud-sql-proxy"
-IMAGE="gcr.io/cloud-sql-connectors/cloud-sql-proxy:${1}"
+IMAGE="gcr.io/cloudsql-docker/gce-proxy:${1}"
 
 if [ "$TOKEN" != "null" ]; then
   echo "::notice ::Starting proxy using token"
